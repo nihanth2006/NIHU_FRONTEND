@@ -1,0 +1,192 @@
+/* ==================================================
+   GLOBAL THEME (Your Gradient Kept Same)
+==================================================*/
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(
+    circle at center,
+    #1e1e40 0%,
+    #2848d5 25%,
+    #000310 50%,
+    #4fb477 70%,
+    #f1ebed 85%,
+    #0e0e0d 100%
+  );
+  background-attachment: fixed;
+  font-family: "Inter", sans-serif;
+  color: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================================================
+   CHATGPT STYLE RESPONSE BOX
+==================================================*/
+.mainResponseBox {
+  background: #ffffff;
+  padding: 22px;
+  margin: 25px auto;
+
+  /* FULL AUTO EXPAND FIX */
+  width: 100%;
+  max-width: 1600px;
+  overflow-x: auto;     /* 👉 This allows the white box to expand horizontally */
+  overflow-y: visible;  /* 👉 No clipping vertically */
+
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
+  border: 1px solid #e8e8e8;
+  animation: fadeUp 0.3s ease-in-out;
+}
+
+
+
+/* Section Titles */
+.solutionHeader {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0c3c75;
+  margin-bottom: 15px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #3b82f6 ;
+}
+
+/* 2 Column Layout */
+.twoColumnContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+/* Theory Box */
+.theoryBox {
+  background:#222 !important;
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid #dddddd;
+}
+
+/* Code Section */
+.codeBox {
+  background:  #222 !important;
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid balck#dddddd;
+  position: relative;
+}
+
+/* ChatGPT-Style Code Block */
+..codeBlock {
+  background: #1e1e1e;
+  color: black,
+  padding: 14px;
+  border-radius: 10px;
+  white-space: pre;
+  overflow-x: auto;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+
+  text-align: left !important; /* FIX alignment */
+  display: block; /* Ensures proper formatting */
+}
+
+/* Copy Button */
+.codeBox::after {
+  content: "Copy";
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.codeBox:hover::after {
+  background: #eee;
+}
+
+/* ==================================================
+   CHATGPT STYLE INPUT BAR
+==================================================*/
+.promptOuterBox {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 92%;
+  margin: 25px auto;
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.promptInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 17px;
+  color: #000;
+}
+
+.promptInput::placeholder {
+  color: #888;
+}
+
+.sendBtn {
+  background: #0c3c75;
+  color: white;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.sendBtn:hover {
+  background: #092e57;
+}
+.copyBtn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s ease-in-out;
+}
+
+.copyBtn:hover {
+  background: #eee;
+}
