@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(
+    circle at center,
+    #1e1e40 0%,
+    #2848d5 25%,
+    #000310 50%,
+    #4fb477 70%,
+    #f1ebed 85%,
+    #0e0e0d 100%
+  );
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
